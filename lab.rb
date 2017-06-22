@@ -1,8 +1,8 @@
 class Lab
   attr_reader :name
 
-  def initialize
-    @name = "Devo's Lab"
+  def initialize(options = {})
+    @name = options[:name] || "Devo's Lab"
     @width = 10
     @height = 20
   end
@@ -26,6 +26,12 @@ class Lab
 
   def change_name(new_name)
     @name = new_name
+  end
+
+  def change_name_example(new_name)
+    if new_name.length > 10
+      @name = new_name
+    end
   end
 
   def area
