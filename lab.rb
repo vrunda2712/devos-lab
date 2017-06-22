@@ -16,7 +16,8 @@ class Lab
   end
 
   def is_zero?(num)
-    if num = 0
+    return false unless num.is_a?(Integer)
+    if num == 0
       return true
     else
       return false
